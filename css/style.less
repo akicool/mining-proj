@@ -1,0 +1,233 @@
+@ft: 'Montserrat';
+@color-link: #080F4D; 
+@color-main-text: #1A1B24;
+
+
+::-webkit-scrollbar {
+    width: 14px; /* ширина для вертикального скролла */
+    height: 0; /* высота для горизонтального скролла */
+    background: linear-gradient(94.73deg, #ffffff 0%, #d3d3d3 100%);
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(94.73deg, #3ca7ff 0%, #e93bfc 100%);
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+}
+
+
+
+p {
+    color: @color-link;
+}
+
+a {
+    text-decoration: none !important;
+    color: @color-link;
+}
+
+
+
+li {
+    list-style: none;
+    color: @color-link;
+}
+
+.social__gmail-link {
+    text-decoration: none;
+    color: @color-link;
+}
+
+.logo__asbit:hover {
+
+}
+
+.header {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.99) 92.21%, #FFFFFF 105.93%);
+}
+
+.nav {
+    padding-top: 20px;
+}
+
+
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    .social__link {
+        display: flex;
+        justify-content: space-between;
+        width: 156px;
+        margin-left: 100px;
+    }
+    .social__gmail {
+        display: flex;
+        justify-content: space-between;
+        width: 364px;
+        .social__gamil-main {
+            display: flex;
+            justify-content: space-between;
+            width: 191px;
+        }
+    }
+}
+
+.nav__list {
+    display: flex;
+    padding: 0;
+    margin-top: 41px;
+    justify-content: space-between;
+    align-items: center;
+    .nav__list-item {
+        display: flex;
+    }
+    .nav__list-button{
+        padding: 12px 24px;
+        background: linear-gradient(94.73deg, #60B7FF 0%, #E255F3 100%);
+        border-radius: 40px;
+        color: #FFF;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+  
+body {
+    height: 100vh;
+    font-family: @ft;
+    
+}
+
+#canvas {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.elipse {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    top: 0;
+    left: 0;
+    clip-path: ellipse(540px 540px);
+    background: rgba(43, 89, 255, 0.8);
+    filter: blur(200px);    
+}
+
+.elipse-two {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    bottom: 0;
+    right: 0;
+    clip-path: ellipse(540px 540px);
+    background: rgba(41, 255, 217, 0.8);
+    filter: blur(200px);    
+}
+
+.welcome__block {  
+    margin-top: 41px;
+    &-title {
+        color: @color-main-text;
+        text-align: center;
+        font-size: 44px;
+        line-height: 61px;
+    }
+    &-subtext {
+        text-align: center;
+        font-size: 16px;
+        line-height: 22px;
+        color: @color-main-text;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    &-button {
+        display: flex;
+        justify-content: center;
+        &-item {
+            padding: 18px 28px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px;
+            background: linear-gradient(94.73deg, #60B7FF 0%, #E255F3 100%);
+            box-shadow: 0px 20px 40px rgba(226, 85, 243, 0.3);
+            border-radius: 40px;
+        }
+    }
+}
+
+.flip__block {
+    margin-top: 110px;
+    &-rect {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 20px;
+        filter: drop-shadow(0px 4px 60px rgba(8, 15, 77, 0.1));
+        background: #FFFFFF;
+        padding: 26px 102px 0;
+    }
+
+    &-rect::after {
+        position: absolute;
+        content: 'Electrum asic';
+        padding: 6px 12px;
+        color: #FFF;
+        background: #1111FF;
+        border-radius: 20px;
+        right: 20px;
+        top: -15px; 
+        border: 2px solid #FFFFFF;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .second-rect::after {
+        content: 'Advanced asic';
+    }
+    .third-rect::after {
+        content: 'Digital asic';
+    }
+
+    &-procent-text {
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 47px;
+        color: #1111FF;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    &-procent-info {
+        color: @color-link;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    &-procent-subtext {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: end;
+    }
+
+    
+}
+
