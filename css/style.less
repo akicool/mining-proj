@@ -48,7 +48,10 @@ li {
 }
 
 .header {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.99) 92.21%, #FFFFFF 105.93%);
+    background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.99) 92.21%, 
+    #FFFFFF 105.93%);
 }
 
 .nav {
@@ -92,6 +95,19 @@ li {
         background: linear-gradient(94.73deg, #60B7FF 0%, #E255F3 100%);
         border-radius: 40px;
         color: #FFF;
+
+        transition: .4s;
+    }
+
+    .nav__list-button:hover {
+        background: linear-gradient(94.73deg, 
+        #8CCBFF 0%, #EF73FF 100%);
+        box-shadow: 0px 20px 40px 
+        rgba(226, 85, 243, 0.6);
+
+        color: #FFF;
+
+        transition: .4s;
     }
 }
 
@@ -111,6 +127,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    //height: 700px; //del
 }
 
 .elipse {
@@ -164,6 +181,19 @@ body {
             background: linear-gradient(94.73deg, #60B7FF 0%, #E255F3 100%);
             box-shadow: 0px 20px 40px rgba(226, 85, 243, 0.3);
             border-radius: 40px;
+
+            transition: .4s;
+        }
+
+        &-item:hover {
+            background: linear-gradient(94.73deg, 
+            #8CCBFF 0%, #EF73FF 100%);
+            box-shadow: 0px 20px 40px 
+            rgba(226, 85, 243, 0.6);
+
+            color: #FFF;
+
+            transition: .4s;
         }
     }
 }
@@ -177,6 +207,9 @@ body {
         border-radius: 20px;
         filter: drop-shadow(0px 4px 60px rgba(8, 15, 77, 0.1));
         background: #FFFFFF;
+    }
+
+    &-rect img {
         padding: 26px 102px 0;
     }
 
@@ -225,9 +258,150 @@ body {
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        text-align: end;
+        text-align: center;
+        padding: 0 20px;
     }
 
     
+    .flip__block-rect-back {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #1111FF;
+        border-radius: 20px;
+    }
+
+    .flip__block-rect-back img {
+        padding: 56px 133px 0;
+    }
+    
+    &-procent-text-back {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    .text-back-span {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+// flip 
+.flip__block {
+  background-color: transparent;
+//   width: 300px;
+  height: 350px;
+//   border: 1px solid #f1f1f1;
+  perspective: 10000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip__block-procent-text-back:last-child {
+    padding-bottom: 56px;
+}
+
+/* This container is needed to position the front and back side */
+.flip__block-inner {
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip__block-inner.hover {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip__block-rect, .flip__block-rect-back{
+  position: absolute;
+//   width: 100%;
+//   height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+
+
+/* Style the back side */
+.flip__block-rect-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+///////////////////////////
+
+
+// features 
+
+.features {
+    margin-top: 60px;
+
+    // title 
+
+    &__title {
+        display: flex;
+
+        text-align: start;
+        padding: 20px 40px;
+    
+        background: linear-gradient(180deg, #F6F9FD 0%, #F1F5FA 100%);
+        border-radius: 30px;
+
+        img {
+            position: relative;
+
+            height: 14px;
+
+            top: 0;
+            left: 0;
+            margin-right: 10px;
+        }
+    }
+    
+    &__text-block {
+    }
+
+    &__text {
+        font-weight: 600;
+        line-height: 22px;
+        margin: 0 !important;
+    }
+    
+    &__subtext {
+        font-weight: 400;
+        line-height: 22px;
+        margin: 0 !important;
+    }
+
+
+    // subtitle 
+    &__subtitle {
+        display: flex;
+
+        text-align: start;
+        padding: 20px 40px;
+        margin-top: 30px;
+    
+        background: linear-gradient(180deg, #F6F9FD 0%, #F1F5FA 100%);
+        border-radius: 30px;
+
+        img {
+            position: relative;
+
+            height: 14px;
+
+            top: 0;
+            left: 0;
+            margin-right: 10px;
+        }
+    }
 }
 

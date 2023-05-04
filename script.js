@@ -12,7 +12,7 @@ ctx.fillRect(0,0,document.body.clientWidth,document.body.clientHeight);
 
 ctx.strokeStyle = "#fff";
 
-var a = document.body.clientWidth * document.body.clientHeight / 10000;
+var a = document.body.clientWidth * document.body.clientHeight / 5000; //10000
 var i;
 var t;
 var x;

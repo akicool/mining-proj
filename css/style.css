@@ -70,6 +70,13 @@ li {
   background: linear-gradient(94.73deg, #60b7ff 0%, #e255f3 100%);
   border-radius: 40px;
   color: #FFF;
+  transition: .4s;
+}
+.nav__list .nav__list-button:hover {
+  background: linear-gradient(94.73deg, #8ccbff 0%, #ef73ff 100%);
+  box-shadow: 0px 20px 40px rgba(226, 85, 243, 0.6);
+  color: #FFF;
+  transition: .4s;
 }
 * {
   margin: 0;
@@ -135,6 +142,13 @@ body {
   background: linear-gradient(94.73deg, #60b7ff 0%, #e255f3 100%);
   box-shadow: 0px 20px 40px rgba(226, 85, 243, 0.3);
   border-radius: 40px;
+  transition: .4s;
+}
+.welcome__block-button-item:hover {
+  background: linear-gradient(94.73deg, #8ccbff 0%, #ef73ff 100%);
+  box-shadow: 0px 20px 40px rgba(226, 85, 243, 0.6);
+  color: #FFF;
+  transition: .4s;
 }
 .flip__block {
   margin-top: 110px;
@@ -146,6 +160,8 @@ body {
   border-radius: 20px;
   filter: drop-shadow(0px 4px 60px rgba(8, 15, 77, 0.1));
   background: #FFFFFF;
+}
+.flip__block-rect img {
   padding: 26px 102px 0;
 }
 .flip__block-rect::after {
@@ -189,5 +205,104 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  text-align: end;
+  text-align: center;
+  padding: 0 20px;
+}
+.flip__block .flip__block-rect-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #1111FF;
+  border-radius: 20px;
+}
+.flip__block .flip__block-rect-back img {
+  padding: 56px 133px 0;
+}
+.flip__block-procent-text-back {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.flip__block .text-back-span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+.flip__block {
+  background-color: transparent;
+  height: 350px;
+  perspective: 10000px;
+  /* Remove this if you don't want the 3D effect */
+}
+.flip__block-procent-text-back:last-child {
+  padding-bottom: 56px;
+}
+/* This container is needed to position the front and back side */
+.flip__block-inner {
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip__block-inner.hover {
+  transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.flip__block-rect,
+.flip__block-rect-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+/* Style the front side (fallback if image is missing) */
+/* Style the back side */
+.flip__block-rect-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+.features {
+  margin-top: 60px;
+}
+.features__title {
+  display: flex;
+  text-align: start;
+  padding: 20px 40px;
+  background: linear-gradient(180deg, #f6f9fd 0%, #f1f5fa 100%);
+  border-radius: 30px;
+}
+.features__title img {
+  position: relative;
+  height: 14px;
+  top: 0;
+  left: 0;
+  margin-right: 10px;
+}
+.features__text {
+  font-weight: 600;
+  line-height: 22px;
+  margin: 0 !important;
+}
+.features__subtext {
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 !important;
+}
+.features__subtitle {
+  display: flex;
+  text-align: start;
+  padding: 20px 40px;
+  margin-top: 30px;
+  background: linear-gradient(180deg, #f6f9fd 0%, #f1f5fa 100%);
+  border-radius: 30px;
+}
+.features__subtitle img {
+  position: relative;
+  height: 14px;
+  top: 0;
+  left: 0;
+  margin-right: 10px;
 }
